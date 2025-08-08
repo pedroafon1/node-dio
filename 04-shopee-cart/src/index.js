@@ -6,16 +6,24 @@ const myWishList = [];
 
 console.log("Welcome to the your Shopee Cart");
 
-const item1 = await createItem("Shoes", 20.99, 1);
-const item2 = await createItem("hotwheels", 39.99, 3);
+// criando itens
+const item1 = await createItem("car","automovel", 20.99, 1);
+const item2 = await createItem("hotwheels","toy", 39.99, 3);
+const item3 = await createItem("car2","automovel", 20.99, 1);
 
-// adicionei 2 itens ao carrinho
+// adicionei 3 itens ao carrinho
 await cartService.addItem(myCart, item1);
 await cartService.addItem(myCart, item2);
+await cartService.addItem(myCart, item3);
 
-// calcular o total
-await cartService.calculateTotal(myCart);
+// removendo um item do carrinho
+/* await cartService.removeItem(myCart, item2);
+await cartService.removeItem(myCart, item2); */
 
+// filtrando prdoutos por categoria
+await cartService.filterItems(myCart, "automovel");
 
-await cartService.displayCart(myCart);
+// exibir o carrinho
+/* await cartService.displayCart(myCart);
+await cartService.calculateTotal(myCart); */
 
