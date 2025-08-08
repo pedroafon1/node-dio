@@ -1,10 +1,15 @@
-## Objetivo
+# 🛒 Carrinho de Compras - Backend Simples (Shopee Clone)
 
-Criar um carrinho de compras baseado no carrinho de compras da shopee.
+Este projeto é um exemplo básico de backend para um carrinho de compras, inspirado na Shopee, utilizando apenas **Node.js puro**, sem frameworks adicionais como Express.
 
-// dominio da aplicação => carrinho
+## 🚀 Tecnologias
 
-// entidades 
+- Node.js (sem frameworks)
 
-// carrinho => cart.js
-// itens => item.js
+## 📦 Funcionalidades
+
+- Adicionar produto ao carrinho
+- Listar produtos do carrinho
+- Remover produto do carrinho
+- Filtrar produtos por categoria
+- Calcular o valor total
