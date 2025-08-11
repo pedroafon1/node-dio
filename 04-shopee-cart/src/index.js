@@ -4,7 +4,7 @@ import readline from "readline";
 
 const myCart = [];
 const myWishList = [];
-//sadasda
+
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
