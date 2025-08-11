@@ -1,7 +1,7 @@
 // export default
 
 exports.connectToDatabase = async (dataName) => {
-  console.log("Conectando ao banco de dados..." + dataName);
+  console.log("Conectando ao banco de dados...." + dataName);
 }
 
 
