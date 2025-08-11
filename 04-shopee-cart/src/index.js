@@ -4,7 +4,7 @@ import readline from "readline";
 
 const myCart = [];
 const myWishList = [];
-
+//sadasda
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
@@ -44,7 +44,7 @@ async function main() {
         console.log("\n✅ Product added successfully!\n");
         break;
       //case "2":
-        //const itemToRemove = await ask("Enter the product name: ");
+        //gconst itemToRemove = await ask("Enter the product name: ");
 
       case "3":
         if (myCart.length === 0) {
