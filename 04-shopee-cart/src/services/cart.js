@@ -1,20 +1,20 @@
-// quais ações meu carrinho pode fazer
+// what actions can my cart do
 
-// casos de uso
+// use cases
 
 
-// adicionar um produto
+// add a product on cart
 async function addItem(userCart, item) {
   userCart.push(item)
 }
 
-// calcular o total do carrinho
+// calculate total of the cart
 
 async function calculateTotal(userCart) {
   const result = userCart.reduce((total, item) => total + item.subtotal(), 0);
   console.log(`\nShopee cart TOTAL IS: ${result}`)
 }
-// remover um produto - remove um item
+// remove one item from cart - remove um item
 async function deleteItem(userCart, name) {
   const index = userCart.findIndex((item) => item.name === name);
 
@@ -24,6 +24,7 @@ async function deleteItem(userCart, name) {
   
 }
 
+// remove all items from cart
 async function removeItem(userCart, item) {
   //1. encontrar o indice do item
   const indexFound = userCart.findIndex((p) => p.name === item.name);
@@ -44,17 +45,18 @@ async function removeItem(userCart, item) {
   
 }
 
-// 
+// show the cart
 async function displayCart(userCart) {
   console.log("Shopee cart list:");
   userCart.forEach((item, index) => {
-    console.log(`${index + 1}. ${item.name} - R$${item.price} | Quantity: ${item.quantity}x | Subtotal: R$${item.subtotal()}`);
+    console.log(`${index + 1}. ${item.name} - R$${item.price} | Filtro: ${item.filter} | Quantity: ${item.quantity}`);
   })
   
 }
-
+// filter items from cart
 async function filterItems(userCart, filter) {
   console.log(`\nShopee cart filtered by ${filter}:`);
+  
   userCart.forEach((item, index) => {
     if(item.filter === filter) {
       console.log(`${index + 1}. ${item.name} - R$${item.price} | Quantity: ${item.quantity}x | Subtotal: R$${item.subtotal()}`);
@@ -62,6 +64,7 @@ async function filterItems(userCart, filter) {
   })
 
 }
+
 
 export { addItem, calculateTotal, removeItem, deleteItem, displayCart, filterItems };
 

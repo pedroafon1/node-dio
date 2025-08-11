@@ -2,7 +2,7 @@
 
 // criar item com subtotal certo
 
-async function createItem(name, filter, price, quantity) {
+function createItem(name, filter, price, quantity) {
   return {
     name,
     price,
