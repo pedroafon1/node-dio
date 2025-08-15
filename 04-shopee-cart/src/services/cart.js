@@ -65,6 +65,10 @@ async function filterItems(userCart, filter) {
 
 }
 
+async function validateItem() {
+  
+}
+
 
 export { addItem, calculateTotal, removeItem, deleteItem, displayCart, filterItems };
 
