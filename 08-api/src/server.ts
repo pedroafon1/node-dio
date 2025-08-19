@@ -1,9 +1,6 @@
-import { json } from 'body-parser';
-import express, {Request, Response} from 'express';
-import createApp  from './app';
+// my server
+
 import app from './app';
-
-
 const port = process.env.PORT;
 
 
