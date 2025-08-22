@@ -1,14 +1,13 @@
 import express from "express";
 import router from "./routes";
 
-const app = express();
+export function createApp() {
+  const app = express();
 
-function createApp() {
   app.use(express.json());
-  app.use("/api", router)
-  
+  app.use("/api", router);
 
   return app;
 }
 
-export default createApp();
+

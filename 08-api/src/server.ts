@@ -1,6 +1,7 @@
 // my server
+import { createApp } from './app';
 
-import app from './app';
+const app = createApp();
 const port = process.env.PORT;
 
 
