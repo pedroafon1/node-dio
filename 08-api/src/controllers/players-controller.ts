@@ -28,8 +28,5 @@ export const postPlayer = async (req: Request, res: Response) => {
 
   if(HttpResponse) {
     res.status(HttpResponse.statusCode).json(HttpResponse.body);
-  } else {
-    const response = await noContent();
-    res.status(response.statusCode).json(response.body);
-  }
+  } 
 };

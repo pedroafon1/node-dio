@@ -28,11 +28,15 @@ export const getPlayerByIdService = async (id: number) => {
 };
 
 export const createPlayerService = async (player: PlayerModel) => {
+  let response = null;
   // verifica se está vazio
-
-  if(player) {
-
+  if(Object.keys(player).length !== 0) {
+    await PlayerRepository.insertPlayer(player);
+    response = await result.created();
+    
   } else {
-    return HttpResponse.noContent();
+    response = await result.badRequest();
   }
+
+  return response;
 };
